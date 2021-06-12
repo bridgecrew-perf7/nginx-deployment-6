@@ -18,7 +18,7 @@ spec:
       - name: blue-webserver
         image: hashicorp/http-echo:0.2.3
         args:
-          - "-text=foo"
+        - "-text=foo"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -39,4 +39,4 @@ spec:
       containers:
         image: hashicorp/http-echo:0.2.3
         args:
-          - "-text=bar"
+        - "-text=bar"
