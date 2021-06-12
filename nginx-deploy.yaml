@@ -1,19 +1,39 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apparel-shop
+  name: apparel-shop-blue
+  labels:
+    app: shopping-blue
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: shop-blue
+  template:
+    metadata:
+      labels:
+        app: shop-blue
+    spec:
+      containers:
+      - name: blue-webserver
+        image: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apparel-shop-green
   labels:
     app: shopping
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: web
+      app: shop-green
   template:
     metadata:
       labels:
-        app: web
+        app: shop-green
     spec:
       containers:
-      - name: kart-webserver
+      - name: green-webserver
         image: nginx
