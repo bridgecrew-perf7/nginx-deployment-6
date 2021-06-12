@@ -17,6 +17,7 @@ spec:
       containers:
       - name: blue-webserver
         image: jdevasia/web:blue
+        imagePullPolicy: Always
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -37,3 +38,4 @@ spec:
       containers:
       - name: green-webserver
         image: jdevasia/web:green
+        imagePullPolicy: Always
