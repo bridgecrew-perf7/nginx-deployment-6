@@ -15,5 +15,5 @@ spec:
         app: web
     spec:
       containers:
-      - name: nginx
-        image: jithindeva
+      - name: webserver
+        image: httpd
