@@ -5,7 +5,7 @@ metadata:
   labels:
     app: shopping-blue
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: shop-blue
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: blue-webserver
-        image: nginx
+        image: httpd
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -25,7 +25,7 @@ metadata:
   labels:
     app: shopping
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: shop-green
