@@ -16,7 +16,7 @@ metadata:
   name: apparel-green-service
 spec:
   selector:
-    app: shop-blue
+    app: shop-green
   ports:
    - protocol: TCP
      port: 80
