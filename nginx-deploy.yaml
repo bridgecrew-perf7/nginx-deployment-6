@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apparal-shop
+  name: apparel-shop
   labels:
     app: shopping
 spec:
