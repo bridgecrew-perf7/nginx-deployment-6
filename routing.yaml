@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: apparel-routing-rules
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /blue
+        pathType: Prefix
+        backend:
+          service:
+           name: apparel-blue-service
+           port: 
+             number: 80
+      - path: /green
+        pathType: Prefix
+        backend:
+          service:
+            name: apparel-green-service
+            port:
+              number: 80
