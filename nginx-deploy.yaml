@@ -16,7 +16,9 @@ spec:
     spec:
       containers:
       - name: blue-webserver
-        image: httpd
+        image: hashicorp/http-echo:0.2.3
+        args:
+          - "-text=foo"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -35,5 +37,6 @@ spec:
         app: shop-green
     spec:
       containers:
-      - name: green-webserver
-        image: nginx
+        image: hashicorp/http-echo:0.2.3
+        args:
+          - "-text=bar"
