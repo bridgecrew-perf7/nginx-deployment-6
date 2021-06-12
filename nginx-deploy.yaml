@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: kart-webserver
-        image: httpd
+        image: nginx
