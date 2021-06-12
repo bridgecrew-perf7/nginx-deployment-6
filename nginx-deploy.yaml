@@ -16,9 +16,7 @@ spec:
     spec:
       containers:
       - name: blue-webserver
-        image: hashicorp/http-echo:0.2.3
-        args:
-        - "-text=blueserver"
+        image: jdevasia/web:blue
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -38,6 +36,4 @@ spec:
     spec:
       containers:
       - name: green-webserver
-        image: hashicorp/http-echo:0.2.3
-        args:
-        - "-text=greenserver"
+        image: jdevasia/web:green
